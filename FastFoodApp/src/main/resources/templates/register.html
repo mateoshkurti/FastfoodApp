@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-exras-springsecurity5">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+<script src="../static/js/script.js" th:src="@{/js/script.js}"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+</head>
+<body>
+	<div class="context">
+		<h1>Register Here!</h1>
+		<div id="error" class="error"></div>
+		<form name="form" action="#" th:action="@{/register}" method="post"
+			onsubmit="return verify()">
+			Email: <input type="email" name="username" /><br> Password: <input
+				type="password" name="password" /><br> Verify Password: <input
+				type="password" name="verifyPassword" /><br>
+				
+				 <input
+				type="submit" value="Add User">
+		</form>
+	</div>
+	<div class="area">
+		<ul class="circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

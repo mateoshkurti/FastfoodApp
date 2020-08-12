@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Receipt</title>
+<link rel="stylesheet" type="text/css" media="all"
+href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+</head>
+<body>
+
+<div class="context">
+		<div class="container">
+	<h1>Your Order</h1>
+	<table align="center" th:if="${receipt != null AND receipt != ''}">
+		<tr>
+			<th>Order</th>
+			<th>Price</th>
+			
+		</tr>
+		<tr th:each="r : ${receipt}">
+			<td th:text="${r.menuName}">NAME</td>
+			<td th:text="${r.price}">DESCRIPTION</td>
+		</tr>
+	</table>
+	
+	<table align="center">
+		<tr>
+			<th>Total:</th>
+			<td th:text="${total}">total</td>
+		</tr>
+		<tr>
+			<th>Tax (GST+HST):</th>
+			<td th:text="${tax}">tax</td>
+		</tr>
+		<tr>
+			<th>Total Price:</th>
+			<td th:text="${fullPrice}">totalPrice</td>
+		</tr>
+	</table>
+	</div>
+	
+	
+	
+	
+	<h3>
+		If you would like to send another Order, please click <a href="/secure">HERE</a>!
+	</h3>
+	
+	
+	
+	</div>
+
+
+
+<!--The following CSS code was used for the background animation and was retrieved from:
+
+https://codepen.io/mohaiman/pen/MQqMyo -->
+
+	<div class="area">
+		<ul class="circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+
+</body>
+</html>

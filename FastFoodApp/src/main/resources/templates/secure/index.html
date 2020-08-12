@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Secure Home Page</title>
+<link rel="stylesheet" type="text/css" media="all"
+href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+
+</head>
+<body>
+<div class="context">
+
+<div class="container">
+	<h1>Please, Enter your Order!</h1>
+	
+	<form method="post" action="#" th:action="@{/secure/submit}">
+		<input type="checkbox" name="menuList" value="Burger" />Burger <br>
+		<input type="checkbox" name="menuList" value="Sandwich" />Sandwich <br>
+		<input type="checkbox" name="menuList" value="Fish&Chips" />Fish&Chips <br>
+		<input type="checkbox" name="menuList" value="Hot Dog" />Hot Dog <br>
+		<input type="checkbox" name="menuList" value="Coke" />Coke <br>
+		<input type="checkbox" name="menuList" value="Sprite" />Sprite <br>
+		<input type="checkbox" name="menuList" value="Ice Tea" />Ice Tea <br>
+		<input type="checkbox" name="menuList" value="Draft Beer" />Draft Beer <br>
+		
+		<input type="submit" name="submit" value="Order">
+ 	
+	</form>
+	</div>
+	
+	<p>
+		<a href="/" th:href="@{/}">Back to home page</a>
+	</p>
+	<p>
+		<a href="#" th:href="@{/logout}">Logout</a>
+	</p>
+</div>
+<div class="area">
+		<ul class="circles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>
